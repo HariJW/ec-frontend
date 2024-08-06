@@ -20,7 +20,7 @@ const Login = () => {
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        window.location.href = "/ec-frontend/products";
+        window.location.href = "/products";
       } else {
         setError("Login failed. Please check your credentials.");
       }
@@ -91,7 +91,7 @@ const Login = () => {
         <div className="text-center mt-6">
           <span className="text-gray-600">Don't have an account?</span>
           <a
-            href="/ec-frontend/register"
+            href="/register"
             className="inline-block mt-2 text-blue-500 hover:text-blue-700 font-medium underline transition-colors duration-300"
           >
             Go for Register
