@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
@@ -21,7 +20,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router basename="/ec-frontend">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -34,7 +32,6 @@ const App = () => {
             <Route path="*" element={<Navigate to="/login" replace />} />
           )}
         </Routes>
-      </Router>
     </div>
   );
 };
