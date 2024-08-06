@@ -13,14 +13,14 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("/api/auth/login", {
+      const response = await axios.post("https://intern-task-api.bravo68web.workers.dev/auth/login", {
         email,
         password,
       });
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
-        window.location.href = "/products";
+        window.location.href = "/ec-frontend/products";
       } else {
         setError("Login failed. Please check your credentials.");
       }
@@ -91,7 +91,7 @@ const Login = () => {
         <div className="text-center mt-6">
           <span className="text-gray-600">Don't have an account?</span>
           <a
-            href="/register"
+            href="/ec-frontend/register"
             className="inline-block mt-2 text-blue-500 hover:text-blue-700 font-medium underline transition-colors duration-300"
           >
             Go for Register

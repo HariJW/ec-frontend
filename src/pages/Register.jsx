@@ -26,7 +26,7 @@ const Register = () => {
         setPassword("");
         setError("");
         setTimeout(() => {
-          navigate("/login");
+          navigate("/ec-frontend/login");
         }, 2000);
       } else {
         setError("Registration failed. Please try again.");
@@ -98,7 +98,7 @@ const Register = () => {
         <div className="text-center mt-6">
           <span className="text-gray-600">Already have an account?</span>
           <a
-            href="/login"
+            href="/ec-frontend/login"
             className="inline-block mt-2 text-blue-500 hover:text-blue-700 font-medium underline transition-colors duration-300"
           >
             Go to Login

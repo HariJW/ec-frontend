@@ -6,7 +6,7 @@ const Header = ({ email }) => {
 
   const handleLogout = () => {
     localStorage.removeItem("token"); // Remove token from localStorage
-    navigate("/login"); // Redirect to login page
+    navigate("/ec-frontend/login"); // Redirect to login page
   };
 
   return (
@@ -25,7 +25,7 @@ const Header = ({ email }) => {
           </>
         ) : (
           <Link
-            to="/login"
+            to="/ec-frontend/login"
             className="bg-white text-blue-600 font-semibold hover:bg-gray-200 py-1 px-4 rounded transition-colors duration-300"
           >
             Login
